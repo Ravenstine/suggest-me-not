@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Suggest Me Not",
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/*"
+      ],
+      "js": ["node_modules/jquery/dist/jquery.slim.min.js", "index.js"]
+    }
+  ]
+}
