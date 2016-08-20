@@ -8,3 +8,7 @@ You can install it as a Chrome extension, or add it to your browser as a user sc
 ## License
 
 MIT
+
+## Changelog
+
+- 0.1.3 - Fixed 'sponsored' selector.

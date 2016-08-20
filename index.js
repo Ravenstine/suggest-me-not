@@ -12,7 +12,7 @@
 
   var selectors = [
     "span:contains('Suggested Post')",
-    "a.iStreamSponsoredLink"
+    "a.uiStreamSponsoredLink"
   ]
 
   $('body').on('DOMNodeInserted', "[id^=hyperfeed_story_id_]", function (e) {
