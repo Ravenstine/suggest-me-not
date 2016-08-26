@@ -1,6 +1,6 @@
 {
   "name": "suggest-me-not",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Block ads disguised as content on Facebook.",
   "main": "index.js",
   "scripts": {

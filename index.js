@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Suggest Me Not
-// @version      0.1.4
+// @version      0.1.5
 // @description  Block ads disguised as content on Facebook.
 // @author       Ravenstine
 // @match        https://www.facebook.com/*
@@ -9,6 +9,8 @@
 // ==/UserScript==
 
 (function(){
+
+  var counter = 0;
 
   var selectors = [
     "span:contains('Suggested Post')",
@@ -19,8 +21,9 @@
     var element = $(e.currentTarget)
     if(element.find(selectors).length){
       element.remove()
+      counter++
       if(chrome && chrome.runtime){
-        chrome.runtime.sendMessage('', function(){});
+        chrome.runtime.sendMessage('' + counter);
       }
     }
   })

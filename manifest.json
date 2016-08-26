@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Suggest Me Not",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "content_scripts": [
     {
       "matches": [
@@ -19,7 +19,9 @@
     "default_title": "Suggest Me Not"
   },
   "background": {
+    "matches": ["*://*.facebook.com/*"],
     "scripts": ["counter.js"],
     "persistent": false
-  }
+  },
+  "permissions": ["tabs", "*://*.google.com/*"]
 }
