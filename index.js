@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Suggest Me Not
-// @version      0.1.2
+// @version      0.1.4
 // @description  Block ads disguised as content on Facebook.
 // @author       Ravenstine
 // @match        https://www.facebook.com/*
@@ -13,12 +13,15 @@
   var selectors = [
     "span:contains('Suggested Post')",
     "a.uiStreamSponsoredLink"
-  ]
+  ].join(", ")
 
   $('body').on('DOMNodeInserted', "[id^=hyperfeed_story_id_]", function (e) {
     var element = $(e.currentTarget)
-    if(element.find(selectors.join(", ")).length){
+    if(element.find(selectors).length){
       element.remove()
+      if(chrome && chrome.runtime){
+        chrome.runtime.sendMessage('', function(){});
+      }
     }
   })
 

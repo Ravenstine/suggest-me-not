@@ -10,5 +10,5 @@ You can install it as a Chrome extension, or add it to your browser as a user sc
 MIT
 
 ## Changelog
-
+- 0.1.4 - Specified navbar icon, added counter badge.
 - 0.1.3 - Fixed 'sponsored' selector.
