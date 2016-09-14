@@ -28,4 +28,9 @@
     }
   })
 
+  $(document).ready(function(){
+    counter = 0;
+    $("[id^=hyperfeed_story_id_]").trigger('DOMNodeInserted')
+  })
+
 })()
